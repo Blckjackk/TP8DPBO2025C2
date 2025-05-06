@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Courses</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- navbar.html -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white active" aria-current="page" href="index.php">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="courses.view.php">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Enrollments.view.php">Enrollments</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Lecturers.view.php">Lecturers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="ProgramStudi.view.php">Program Studi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Students.view.php">Students</a>
+            </li>
+          </ul>
+          <span class="navbar-brand text-white"><strong>Manajemen Course</strong></span>
+        </div>
+      </div>
+  </nav>
+
+
+  <div class="container-fluid mt-5 align-center">
+    <div class="col-lg-3 col-md-3 col-sm-12 col-12 mx-auto my-5">
+      <h1 class="text-center pt-3">Tambah Course</h1>
+      <form action="courses.php" method="POST">
+        <div class="form-row">
+          <div class="form-group mt-3">
+            <label for="course_name">Nama Mata Kuliah</label>
+            <input type="text" class="form-control" name="course_name" required />
+          </div>
+          <div class="form-group mt-3">
+            <label for="prodi_id">Prodi ID</label>
+            <input type="number" class="form-control" name="prodi_id" required />
+          </div>
+          <div class="form-group mt-3">
+            <label for="lecturer_id">Lecturer ID</label>
+            <input type="number" class="form-control" name="lecturer_id" required />
+          </div>
+          <button type="submit" name="add" class="btn btn-success mt-3">Add</button>
+        </div>
+      </form>
+    </div>
+
+    <h1 class="text-center">Tabel Mata Kuliah</h1>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-12 mt-4">
+      <table class="table text-center align-middle" border="1">
+        <thead class="table-primary">
+          <tr>
+            <td class="col-1">ID</td>
+            <td class="col-2">Nama Mata Kuliah</td>
+            <td class="col-2">Prodi ID</td>
+            <td class="col-2">Lecturer ID</td>
+            <td class="col-2">Action</td>
+          </tr>
+        </thead>
+        <tbody>
+          DATA_TABEL
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
